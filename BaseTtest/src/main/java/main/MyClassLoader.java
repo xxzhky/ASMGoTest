@@ -1,4 +1,4 @@
-package com.ledboot.main;
+package main;
 
 public class MyClassLoader extends ClassLoader {
 	public Class defineClass(String name, byte[] b) {

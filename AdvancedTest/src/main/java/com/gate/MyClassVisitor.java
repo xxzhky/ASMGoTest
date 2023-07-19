@@ -1,4 +1,4 @@
-package com.leadboot.gate;
+package com.gate;
 
 /**
  * @author: Fred

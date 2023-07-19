@@ -1,4 +1,4 @@
-package com.leadboot.gate.loader;
+package com.gate.loader;
 
 /**
  * @author: Fred
@@ -8,9 +8,8 @@ package com.leadboot.gate.loader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.nio.ByteBuffer;
-import java.security.ProtectionDomain;
 
-import com.leadboot.gate.MyMethodLoggerClassVisitor;
+import com.gate.MyMethodLoggerClassVisitor;
 import org.objectweb.asm.ClassReader;
 import org.objectweb.asm.ClassWriter;
 

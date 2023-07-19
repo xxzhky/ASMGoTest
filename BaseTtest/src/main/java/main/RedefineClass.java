@@ -1,4 +1,4 @@
-package com.ledboot.main;
+package main;
 
 import java.io.FileOutputStream;
 import java.io.OutputStream;

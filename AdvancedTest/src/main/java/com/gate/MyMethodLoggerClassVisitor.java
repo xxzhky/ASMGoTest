@@ -1,4 +1,4 @@
-package com.leadboot.gate;
+package com.gate;
 
 import org.objectweb.asm.ClassVisitor;
 import org.objectweb.asm.MethodVisitor;

@@ -1,4 +1,4 @@
-package com.ledboot.main;
+package main;
 
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -9,7 +9,6 @@ import java.lang.reflect.Method;
 import org.objectweb.asm.Attribute;
 import org.objectweb.asm.ClassReader;
 import org.objectweb.asm.ClassVisitor;
-import org.objectweb.asm.ClassWriter;
 import org.objectweb.asm.MethodVisitor;
 import org.objectweb.asm.Opcodes;
 
@@ -66,7 +65,7 @@ public class MainTester {
 			Class clazz = new MyClassLoader().defineClass(
 					"com.ledboot.ASMTest.Person", byteArr);
 			try {
-				Object personObj = clazz.newInstance();
+				Object personObj =  clazz.getDeclaredConstructor().newInstance();
 				Field nameField = clazz.getDeclaredField("name");
 				Field ageField = clazz.getDeclaredField("age");
 				Method setNameMethod = clazz.getDeclaredMethod("setName", new Class[]{String.class});

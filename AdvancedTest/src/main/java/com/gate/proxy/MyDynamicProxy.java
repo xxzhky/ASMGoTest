@@ -1,4 +1,4 @@
-package com.leadboot.gate.proxy;
+package com.gate.proxy;
 
 /**
  * @author: Fred
@@ -8,9 +8,8 @@ package com.leadboot.gate.proxy;
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
 import java.nio.ByteBuffer;
-import java.security.ProtectionDomain;
 
-import com.leadboot.gate.loader.MyClassLoader;
+import com.gate.loader.MyClassLoader;
 import org.objectweb.asm.ClassWriter;
 import org.objectweb.asm.MethodVisitor;
 import org.objectweb.asm.Opcodes;
