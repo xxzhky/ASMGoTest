@@ -23,6 +23,7 @@ public class MainTester {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
+		invokeClass();
 	}
 	
 	static class  ClassPrinter extends ClassVisitor{
