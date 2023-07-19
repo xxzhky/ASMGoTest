@@ -1,4 +1,4 @@
-package main;
+package com.ledboot.main;
 
 import java.io.FileInputStream;
 import java.io.IOException;
