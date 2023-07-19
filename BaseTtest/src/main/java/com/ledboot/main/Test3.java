@@ -104,7 +104,7 @@ public class Test3 {
 			
 			Method showInfoMethod = clazz.getDeclaredMethod("showInfo", new Class[]{});
 			showInfoMethod.setAccessible(true);
-			
+			showInfoMethod.invoke(personObj, null);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

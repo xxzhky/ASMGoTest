@@ -19,6 +19,7 @@ public class RedefineClass {
 		ClassReader classReader = new ClassReader(byteArray);
 		ClassWriter classWriter = new ClassWriter(classReader, ClassWriter.COMPUTE_MAXS);
 		ClassVisitor changeVisitor = new ChangeVisitor(classWriter);
+		//树形api
 		classReader.accept(changeVisitor, ClassReader.EXPAND_FRAMES);
 		try {
 			OutputStream outputStream = new FileOutputStream("Person2.class");
