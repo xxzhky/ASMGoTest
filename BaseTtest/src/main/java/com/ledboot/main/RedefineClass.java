@@ -1,7 +1,6 @@
 package com.ledboot.main;
 
-import java.io.FileOutputStream;
-import java.io.OutputStream;
+import java.io.*;
 
 import org.objectweb.asm.ClassReader;
 import org.objectweb.asm.ClassVisitor;
@@ -14,9 +13,25 @@ public class RedefineClass {
 	
 	private byte [] byteArray = null;
 
-	public RedefineClass(byte [] b){
+	public RedefineClass(byte[] b, Class clazz){
 		byteArray = b;
-		ClassReader classReader = new ClassReader(byteArray);
+		ClassReader classReader = null;
+		String resourceName = clazz.getSimpleName().replace('.', '/').concat(".class");
+
+		//方式 1
+//		try {
+//			classReader = new ClassReader(new FileInputStream(resourceName));
+//		} catch (IOException e) {
+//			e.printStackTrace();
+//		};
+		//方式 2
+		try {
+			classReader = new ClassReader(new FileInputStream("Person.class"));
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		//方式 3
+		//classReader = new ClassReader(byteArray);
 		ClassWriter classWriter = new ClassWriter(classReader, ClassWriter.COMPUTE_MAXS);
 		ClassVisitor changeVisitor = new ChangeVisitor(classWriter);
 		//树形api

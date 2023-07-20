@@ -117,7 +117,7 @@ public class Test3 {
 		} catch (Exception e) {
 		}
 		
-		RedefineClass redefineClass = new RedefineClass(byteArray);
+		RedefineClass redefineClass = new RedefineClass(byteArray, clazz);
 
 	}
 }
