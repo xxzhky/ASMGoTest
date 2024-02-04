@@ -65,4 +65,19 @@ public class BitSetTest {
 
         System.out.println("Intersection: " + intersection); // 输出交集结果，假设输出为 [1, 2, 3]
     }
+
+    public static void complement(){
+        BitSet bitsetA = new BitSet();
+
+// 假设 bitsetA 包含了 [0, 1, 2, 3]
+        bitsetA.set(0);
+        bitsetA.set(1);
+        bitsetA.set(2);
+        bitsetA.set(3);
+
+        BitSet complement = new BitSet(); // 用于存储补集结果的 BitSet
+        complement.or(bitsetA); // 将 bitsetA 的内容加入到 complement 中，得到全集 [0-31]（假设 BitSet 的大小为 32）
+        complement.andNot(bitsetA); // 取补集，即不属于 bitsetA 中的位设置为 false，最终得到补集结果为 [0-31] 中除了 [0, 1, 2, 3] 的位。
+        //complement.set(0,1,true);
+    }
 }
